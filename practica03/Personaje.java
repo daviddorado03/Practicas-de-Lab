@@ -9,6 +9,6 @@ public class Personaje {
         return nombre;
     }
     public void saludar(){
-        System.out.println("Hola alumno de POO" + nombre);
+        System.out.println("Hola alumno de POO " + nombre);
     }
 }

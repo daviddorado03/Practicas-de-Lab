@@ -8,4 +8,7 @@ public class Personaje {
     public String getNombre(){
         return nombre;
     }
+    public String saludar(){
+        System.out.println("Hola alumno de POO" + nombre);
+    }
 }

@@ -1,3 +1,5 @@
+package org.gamex.poo1pvsz.personajes;
+
 public class Personaje {
     private String nombre;
     private int edad;

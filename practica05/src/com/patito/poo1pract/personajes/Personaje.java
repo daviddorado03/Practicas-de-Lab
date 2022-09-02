@@ -1,4 +1,4 @@
-package org.gamex.poo1pvsz.personajes;
+package com.patito.poo1pract.personajes;
 
 public class Personaje {
     private String nombre;

@@ -6,7 +6,7 @@ public class Personaje {
 
     public Personaje(String nombre, int edad){
         this.nombre = nombre;
-        this.edad = 0;
+        this.edad = edad;
     }
     public void setNombre(String nombre){
         if ((nombre.length() > 5) && (nombre.length() <= 25)){

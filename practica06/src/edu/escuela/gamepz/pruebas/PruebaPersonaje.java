@@ -21,5 +21,8 @@ public class PruebaPersonaje {
         per06.setNombre("Francisco Xavier Zepeda Flores");
         per08.setNombre("Dayan");
         per10.setNombre("Axel Fabian Eduardo David");
+        per07.setEdad((int)(Math.random() * 1000));
+        per09.setEdad((int)(Math.random() * 1000));
+        System.out.println("---");
     }
 }

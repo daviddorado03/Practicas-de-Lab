@@ -16,6 +16,26 @@ public class PruebaCiclos {
         System.out.println("n = " + n);
         System.out.println("m = " + m);
         for (int i = n; i < m; i++){
+            int ed = ((int)(Math.random()*250));
+            if (per01.setEdad(ed)){
+                System.out.println(per01.getDetalle() + "se modificó la edad");
+            } else {
+                System.out.println(per01.getDetalle() + "sin modifcación en edad a " + ed);
+            }
+            ed = ((int)(Math.random()*250));
+            if (per02.setEdad(ed)){
+                System.out.println(per02.getDetalle() + "se modificó la edad");
+            } else {
+                System.out.println(per02.getDetalle() + "sin modifcación en edad a " + ed);
+            }
+            ed = ((int)(Math.random()*250));
+            if (per03.setEdad(ed)){
+                System.out.println(per03.getDetalle() + "se modificó la edad");
+            } else {
+                System.out.println(per03.getDetalle() + "sin modifcación en edad a " + ed);
+            }
+            ed = ((int)(Math.random()*200));
+            System.out.println(ed);
             
         }
     }

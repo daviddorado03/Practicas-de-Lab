@@ -34,9 +34,15 @@ public class PruebaCiclos {
             } else {
                 System.out.println(per03.getDetalle() + "sin modifcación en edad a " + ed);
             }
-            ed = ((int)(Math.random()*200));
-            System.out.println(ed);
-            
+            do{
+                ed = ((int)(Math.random()*200));
+                System.out.println(ed);
+                if (ed > 150){
+                    System.out.println("***El número generado es mayor a 150***");
+                    break;
+                }
+            } while (!per04.setEdad(ed));
+            System.out.println(per04.getDetalle());
         }
     }
 }

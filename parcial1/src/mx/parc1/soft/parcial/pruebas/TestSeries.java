@@ -1,5 +1,5 @@
-package src.mx.parc1.soft.pruebas;
-import src.mx.parc1.soft.series.Serie;
+package mx.parc1.soft.parcial.pruebas;
+import mx.parc1.soft.parcial.series.Serie;
 
 public class TestSeries {
     public static void main(String[] args) {
@@ -11,6 +11,7 @@ public class TestSeries {
         //int n = s.genNumero(100);
         //s.fibo(n);
         int n = s.genNumero(100);
-        s.fiboN(3);
+        int p = s.fiboN(n);
+        System.out.println(p);
     }
 }

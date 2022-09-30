@@ -1,22 +1,26 @@
-package src.mx.parc1.soft.series;
+package mx.parc1.soft.parcial.series;
 
 public class Serie{
     private int f;
-    private int t1 = 1;
-    private int t2;
+    private int x =1;
     private int y;
     public int fiboN(int n){
         for (int i = 0; i <= n; i++){
-            t2 = f;
-            f = t1 + f;
-            t1 = t2;
+            y = f;
+            f = x + f;
+            x = y;
         }
-        return t1;
+        return x;
     }
     public int genNumero(int x){
         y = (int)(Math.random()*x*10);
-        while (y < x){
+        if (y < 10){
+            y = 100;
+        }
+        else{
+            while (y < x){
             y = (int)(Math.random()*x*10);
+            }
         }
         return y;
     }

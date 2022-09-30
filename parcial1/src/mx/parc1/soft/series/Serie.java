@@ -4,8 +4,9 @@ public class Serie{
     private int f;
     private int t1 = 1;
     private int t2;
+    private int y;
     public int fiboN(int n){
-        for (int i = 1; i <= n; i++){
+        for (int i = 0; i <= n; i++){
             t2 = f;
             f = t1 + f;
             t1 = t2;
@@ -13,6 +14,9 @@ public class Serie{
         return t1;
     }
     public int genNumero(int x){
-        return x;
+        for (int i = 0; i >= x; i++){
+            y = (int)(Math.random()*10);
+        }
+        return y;
     }
 }

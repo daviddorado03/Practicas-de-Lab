@@ -10,7 +10,7 @@ public class TestSeries {
         // System.out.println(o);
         //int n = s.genNumero(100);
         //s.fibo(n);
-        int p = s.fiboN(6);
-        System.out.println(p);
+        int n = s.genNumero(100);
+        s.fiboN(n);
     }
 }

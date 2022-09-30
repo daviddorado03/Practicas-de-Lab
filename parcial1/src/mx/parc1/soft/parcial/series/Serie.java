@@ -13,14 +13,12 @@ public class Serie{
         return x;
     }
     public int genNumero(int x){
-        y = (int)(Math.random()*x*10);
-        if (y < 10){
-            y = 100;
+        y = 0;
+        if (x < 10){
+            x = 100;
         }
-        else{
-            while (y < x){
+        while (y < x){
             y = (int)(Math.random()*x*10);
-            }
         }
         return y;
     }

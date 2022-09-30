@@ -9,7 +9,10 @@ public class Serie{
             t2 = f;
             f = t1 + f;
             t1 = t2;
-            return t1;
         }
+        return t1;
+    }
+    public int genNumero(int x){
+        return x;
     }
 }

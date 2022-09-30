@@ -11,6 +11,6 @@ public class TestSeries {
         //int n = s.genNumero(100);
         //s.fibo(n);
         int n = s.genNumero(100);
-        s.fiboN(n);
+        s.fiboN(3);
     }
 }

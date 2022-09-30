@@ -14,8 +14,9 @@ public class Serie{
         return t1;
     }
     public int genNumero(int x){
-        for (int i = 0; i >= x; i++){
-            y = (int)(Math.random()*10);
+        y = (int)(Math.random()*x*10);
+        while (y < x){
+            y = (int)(Math.random()*x*10);
         }
         return y;
     }

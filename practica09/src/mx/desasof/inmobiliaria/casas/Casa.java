@@ -1,3 +1,4 @@
+package mx.desasof.inmobiliaria.casas;
 public class Casa{
     private String tipo;
     private int hab;

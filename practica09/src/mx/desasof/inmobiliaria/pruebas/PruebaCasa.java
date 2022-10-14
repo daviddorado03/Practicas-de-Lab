@@ -17,13 +17,15 @@ public class PruebaCasa {
         int i = 0;
         while (i < casas.length){
             for (Casa c : casas) {
-                if(casas[i] == c){
+                if(casas[i] == c){ 
                     System.out.println(casas[i] + " son el mismo objeto " + c + "\n = = = = = ");
-                }if(casas[i].equals(c)){
+                    break;
+                } if(casas[i].equals(c)){
                     System.out.println(casas[i] + " son iguales " + c+ "\n e e e e e ");
+                    break;
                 }System.out.println(casas[i] + " son diferentes " + c + "\n ! ! ! ! ! ");
-            } System.out.println("----------------");
-            i++;
+        } System.out.println("----------------");
+        i++;
         }
     }
 }

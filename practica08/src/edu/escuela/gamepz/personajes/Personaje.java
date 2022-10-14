@@ -1,5 +1,4 @@
 package edu.escuela.gamepz.personajes;
-
 public class Personaje {
     private String nombre;
     private int vida;
@@ -36,27 +35,15 @@ public class Personaje {
         return nombre + "\t" + vida;
     }
     public void decVida(){
-        vida -= 1;
-        if (!setVida(vida)){
-            this.vida += 1;
-        }
+        decVida(1);
     }
     public void decVida(int dec){
-        vida -= dec;
-        if (!setVida(vida)){
-            this.vida += dec;
-        }
+        setVida(vida-dec);
     }
     public void addVida(){
-        vida += 1;
-        if (!setVida(vida)){
-            this.vida -= 1;
-        }
+        addVida(1);
     }
     public void addVida(int add){
-        vida += add;
-        if (!setVida(vida)){
-            this.vida -= add;
-        }
+        setVida(vida+add);
     }
 }

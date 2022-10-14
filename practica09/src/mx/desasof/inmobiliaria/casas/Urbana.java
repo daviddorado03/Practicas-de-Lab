@@ -6,7 +6,7 @@ public class Urbana extends Casa{
         this.banios = banios;
     }
     public Urbana(String tipo, int banios) {
-        super(tipo, banios, banios);
+        super(tipo);
         this.banios = banios;
     }
     public int hashCode(){

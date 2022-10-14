@@ -22,7 +22,8 @@ public class PruebaCasa {
                 }if(casas[i].equals(c)){
                     System.out.println(casas[i] + " son iguales " + c+ "\n e e e e e ");
                 }System.out.println(casas[i] + " son diferentes " + c + "\n ! ! ! ! ! ");
-            } i++;
-            }
+            } System.out.println("----------------");
+            i++;
         }
     }
+}

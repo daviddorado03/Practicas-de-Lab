@@ -11,7 +11,7 @@ public class Casa{
         this(tipo, 2, 2000000.0F);
     }
     public int hashCode(){
-        return tipo.hashCode() * hab * (int)(costo);
+        return tipo.hashCode() * hab * (int)(costo) * 3;
     }
     public boolean equals(Object o){
         if (o != null && o instanceof Casa){

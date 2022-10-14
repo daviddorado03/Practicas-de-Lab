@@ -10,10 +10,7 @@ public class Campo extends Casa{
         return super.hashCode() * (int)(piscina[0]) * (int)(piscina[1]) / 5;
     }
     public boolean equals(Object o){
-        if(super.equals(o) && o instanceof Campo){
-            return true;
-        }
-        return false;
+        return super.equals(o) && o instanceof Campo;
     }
     public String toString(){
         return super.toString() + " " + piscina[0] + " " + piscina[1];

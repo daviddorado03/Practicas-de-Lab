@@ -6,16 +6,14 @@ public class Urbana extends Casa{
         this.banios = banios;
     }
     public Urbana(String tipo, int banios) {
-        this(tipo, 2, 2000000.0F, banios);
+        super(tipo, banios, banios);
+        this.banios = banios;
     }
     public int hashCode(){
         return super.hashCode() * banios * 23;
     }
     public boolean equals(Object o){
-        if (super.equals(o) && o instanceof Urbana){
-            return true;
-        }
-        return false;
+        return super.equals(o) && o instanceof Urbana;
     }
     public String toString(){
         return super.toString() + " " + banios;

@@ -12,39 +12,27 @@ public class Planta extends Personaje{
         this(nombre, 3, escudo);
     }
     public Planta(String nombre, int vida){
-        this(nombre, vida, NULO);
+        this(nombre, vida, Escudo.NULO);
     }
     public Planta(String nombre){
-        this(nombre, 3, NULO);
+        this(nombre, 3, Escudo.NULO);
     }
     public Escudo getEscudo() {
         return escudo;
     }
     public String toString(){
-        return super.toString() + "\t" + escudo;
+        return super.toString() + "\t" + escudo.getNivel();
     }
     public void decVida(){
-        if(escudo == 'A'){
-            decVida(2);
-        } else {decVida();
-        }
+        decVida(escudo.getNivel());
     }
     public void decVida(int dec){
-        if(escudo == 'A'){
-            decVida(2*dec);
-        } else {decVida(dec);
-        }
+        decVida(escudo.getNivel()*dec);
     }
     public void addVida(){
-        if(escudo == 'A'){
-            addVida(2);
-        } else {addVida();
-        }
+        addVida(escudo.getNivel());
     }
     public void addVida(int add){
-        if(escudo == 'A'){
-            addVida(2*add);
-        } else {addVida(add);
-        }
+        addVida(escudo.getNivel()*add);
     }
 }

@@ -1,15 +1,16 @@
 package edu.escuela.gamepz.pruebas;
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.personajes.buenos.Planta;
-import edu.escuela.gamepz.personajes.malos.Zombie;;
+import edu.escuela.gamepz.personajes.malos.Zombie;
+import edu.escuela.gamepz.utils.Escudo;
 
 public class PruebaHerencia {
     public static void main(String[] args) {
-        Personaje per01 = new Personaje("David", 100);
-        Personaje per02 = new Personaje("Bianca");
-        Planta plan01 = new Planta("Fabian", 10, 'B');
+        Personaje per01 = new Planta("David", 10);
+        Personaje per02 = new Planta("Bianca");
+        Planta plan01 = new Planta("Fabian", 10, Escudo.MEDIO);
         Planta plan02 = new Planta("Almendra", 50);
-        Planta plan03 = new Planta("Ricardo", 'C');
+        Planta plan03 = new Planta("Ricardo", Escudo.BAJO);
         Planta plan04 = new Planta("Silvia");
         Zombie zom01 = new Zombie("Armando", 80, false);
         Zombie zom02 = new Zombie("Josseline", true);
@@ -26,7 +27,8 @@ public class PruebaHerencia {
             }
             if (p instanceof Zombie){
                 Zombie tmp = (Zombie) p;
-                System.out.println("Soy zombie "+ tmp.getAtaque());
+                System.out.println("Soy zombie "+ tmp.getAtaque() );
+                tmp.come();
                 tmp.decVida(al);
             }
             System.out.println(al + "\n" + p + "\n");

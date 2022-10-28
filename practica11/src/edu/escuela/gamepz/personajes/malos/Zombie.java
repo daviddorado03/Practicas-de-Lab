@@ -21,24 +21,24 @@ public class Zombie extends Personaje implements Muerto{
     }
     public void decVida(){
         if(!ataque){
-            decVida(3);
-        } else {decVida(2);
+            setVida(3);
+        } else {setVida(2);
         }
     }
     public void decVida(int dec){
         if(!ataque){
-            decVida(3*dec);
-        } else {decVida(2*dec);
+            setVida(3*dec);
+        } else {setVida(2*dec);
         }
     }
     public void addVida(){
         if(ataque){
-            addVida(3);
+            setVida(3);
         }
     }
     public void addVida(int add){
         if(ataque){
-            addVida(3*add);
+            setVida(3*add);
         }
     }
     public void come(){

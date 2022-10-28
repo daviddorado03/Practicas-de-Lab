@@ -6,8 +6,8 @@ import edu.escuela.gamepz.utils.Escudo;
 
 public class PruebaHerencia {
     public static void main(String[] args) {
-        Personaje per01 = new Planta("David", 10);
-        Personaje per02 = new Planta("Bianca");
+        Personaje per01 = new Planta("David", 100);
+        Personaje per02 = new Zombie("Bianca");
         Planta plan01 = new Planta("Fabian", 10, Escudo.MEDIO);
         Planta plan02 = new Planta("Almendra", 50);
         Planta plan03 = new Planta("Ricardo", Escudo.BAJO);
@@ -19,7 +19,7 @@ public class PruebaHerencia {
         int index = 0;
         for (Personaje p : personajes) {
             System.out.println(p);
-            int al = (int)(Math.random()*101+1);
+            int al = (int)(Math.random()*10);
             if (p instanceof Planta){
                 Planta tmp = (Planta) p;
                 System.out.println("Soy planta "+ tmp.getEscudo());

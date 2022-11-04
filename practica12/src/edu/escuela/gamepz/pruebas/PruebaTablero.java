@@ -24,7 +24,7 @@ public class PruebaTablero {
             try{
                 Tablero.insertar(p, pos);
             } catch (PersException pe){
-                System.err.println(pe.getMessage() + " " + " pos");
+                System.err.println(pe.getMessage() + " " + pos);
             }
         }
         Tablero.mostrar();
@@ -36,5 +36,6 @@ public class PruebaTablero {
                 System.err.println(pe.getMessage() + " " + pe.getPos());
             }
         }
+        Tablero.mostrar();
     }
 }

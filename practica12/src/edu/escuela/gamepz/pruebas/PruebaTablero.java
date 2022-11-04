@@ -24,7 +24,16 @@ public class PruebaTablero {
             try{
                 Tablero.insertar(p, pos);
             } catch (PersException pe){
-                System.err.println(pe.getMessage());
+                System.err.println(pe.getMessage() + " " + " pos");
+            }
+        }
+        Tablero.mostrar();
+        for (int i = 0; i < Tablero.MAX_SIZE; i++){
+            int pos = (int) (Math.random()*20-5);
+            try{
+                Tablero.borrar(pos);
+            } catch (PersException pe){
+                System.err.println(pe.getMessage() + " " + pe.getPos());
             }
         }
     }

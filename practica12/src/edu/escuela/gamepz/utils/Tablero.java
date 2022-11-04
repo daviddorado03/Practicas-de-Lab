@@ -7,12 +7,28 @@ public class Tablero {
     private Tablero(){};
     public static void mostrar(){
         System.out.println("\nInicio *** Contenido del arreglo en Tablero");
-        for (Personaje pos : personajes) {
-            if ( pos == null){
-                System.out.println(pos + "---");
+        for (int i = 0; i < personajes.length; i++) {
+            if ( personajes[i] == null){
+                System.out.println(i + "---");
             } else {
-                System.out.println(pos + " " + Personaje);
-            } System.out.println();
+                System.out.println(i + " " + personajes[i]);
+            } System.out.println("Fin *** Contenido del arreglo en Tablero\n");
+        }
+    }
+    public static void insertar(Personaje p, int pos) throws PersException{
+        if (pos < 0 && pos > MAX_SIZE ){
+            throw new PersException("Indice fuera de rango ", pos);
+        } else {
+            personajes[pos] = p;
+        }
+    }
+    public static void borrar(int pos) throws PersException{
+        if (pos < 0 && pos > MAX_SIZE ){
+            throw new PersException("Indice fuera de rango ", pos);
+        } if ( personajes[pos] == null){
+            throw new PersException("Si personaje para borrar ", pos);
+        } else {
+            personajes[pos] = null;
         }
     }
 }

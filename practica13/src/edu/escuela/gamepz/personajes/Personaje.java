@@ -9,8 +9,8 @@ public abstract class Personaje implements Comparable <Personaje>{
     public Personaje(String nombre, int vida, float size){
         this.nombre = nombre;
         this.vida = vida;
-        if(size==0.0f){
-            this.size = size;
+        if(this.size==0.0f){
+            this.size = genSize();
         } else { this.size = Math.round(size)/100;
         }
     }

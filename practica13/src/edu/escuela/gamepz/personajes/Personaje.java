@@ -25,6 +25,9 @@ public abstract class Personaje implements Comparable <Personaje>{
     public String getNombre(){
         return nombre;
     }
+    public float getSize() {
+        return size;
+    }
     public void saludar(){
         System.out.println("Hola alumno de POO " + nombre);
     }

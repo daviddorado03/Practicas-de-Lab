@@ -15,15 +15,15 @@ import edu.escuela.gamepz.utils.Tablero;
 public class PruebaCollection {
     public static void main(String[] args) {
         Personaje[] datos = {
-            new Planta("David", Tablero.genVida()), 
+            new Planta("Fabian", Tablero.genVida()), 
             new Zombie("Bianca",Tablero.genVida()),
             new Planta("Fabian", Tablero.genVida(), Escudo.MEDIO),
-            new Planta("Almendra", Tablero.genVida()),
-            new Planta("Ricardo", Tablero.genVida(),Escudo.BAJO),
-            new Planta("Silvia",Tablero.genVida()),
+            new Planta("Armando", Tablero.genVida()),
+            new Planta("Bianca", Tablero.genVida(),Escudo.BAJO),
+            new Planta("Dayan",Tablero.genVida()),
             new Zombie("Armando", Tablero.genVida(), false),
-            new Zombie("Josseline",Tablero.genVida(), true),
-            new Zombie("Eduardo",Tablero.genVida())
+            new Zombie("Dayan",Tablero.genVida(), true),
+            new Zombie("Armando",Tablero.genVida())
         };
         TreeSet<Personaje> ts = new TreeSet<>();
         LinkedList<Personaje> linked = new LinkedList<>();

@@ -66,7 +66,7 @@ public class PruebaCollection{
         for (Personaje p : arr) {
             System.out.println(p);
         }
-        guardarObjetos(path1, ts);
+        guardarObjetos(f, ts);
     }
     private static void mostrarDirectorio(File f){
         for (String s : f.list()) {
@@ -74,9 +74,9 @@ public class PruebaCollection{
         }
     }
     
-    private static void guardarObjetos(String path, TreeSet ts) {
+    private static void guardarObjetos(File f, TreeSet ts) {
         try {
-            FileOutputStream file = new FileOutputStream (path+"datArbol.ser");
+            FileOutputStream file = new FileOutputStream (f );
             ObjectOutputStream s = new ObjectOutputStream (file);
             for(Object o : ts){
                 Personaje p = (Personaje) o;

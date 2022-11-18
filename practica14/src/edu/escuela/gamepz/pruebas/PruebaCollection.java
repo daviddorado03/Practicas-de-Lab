@@ -16,9 +16,19 @@ import edu.escuela.gamepz.utils.Tablero;
 public class PruebaCollection {
     public static void main(String[] args) {
         String path = System.getProperty("user.home")+ System.getProperty("file.separator");
-        Scanner s = new Scanner("path");
-        File fname = new File(s.next());
+        Scanner s = new Scanner(System.in);
+        String fname = s.nextLine();
         path += fname;
+        File f = new File(path);
+        if (f.exists() ){
+            if (f.isFile()){
+                System.out.println("El archivo existe");
+                System.exit(0);
+            } if (f.isDirectory()){
+                //mostrarDirectorio(f);
+                System.exit(0);
+            }
+        }
         Personaje[] datos = {
             new Planta("Fabian", Tablero.genVida()), 
             new Zombie("Bianca",Tablero.genVida()),
@@ -52,5 +62,12 @@ public class PruebaCollection {
         for (Personaje p : arr) {
             System.out.println(p);
         }
+    }
+    private static void mostrarDirectorio(File f){
+        System.out.println(f);
+        System.exit(0);
+    }
+    private static void guardarObjetos(f, datos){
+        
     }
 }

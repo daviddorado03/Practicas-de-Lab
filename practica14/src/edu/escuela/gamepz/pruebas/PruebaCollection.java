@@ -23,6 +23,7 @@ import edu.escuela.gamepz.utils.Tablero;
 public class PruebaCollection{
     public static void main(String[] args) {
         String path = System.getProperty("user.home")+ System.getProperty("file.separator");
+        String path1 = path;
         Scanner s = new Scanner(System.in);
         String fname = s.nextLine();
         path += fname;
@@ -69,19 +70,24 @@ public class PruebaCollection{
         for (Personaje p : arr) {
             System.out.println(p);
         }
+        guardarObjetos(path1, ts);
     }
     private static void mostrarDirectorio(File f){
-        System.out.println(f.list());
+        for (String s : f.list()) {
+            System.out.println(s);
+        }
     }
-    private static void guardarObjetos(File f, Collection ts) {
+    
+    private static void guardarObjetos(String path, TreeSet ts) {
         try {
-            FileInputStream file = new FileInputStream ("datArbol.ser");
-            ObjectInputStream s = new ObjectInputStream (file);
-            for(int i = 0; i > ts.size(); i++){
-                Personaje p = (Personaje) p;
+            FileOutputStream file = new FileOutputStream (path+"datArbol.ser");
+            ObjectOutputStream s = new ObjectOutputStream (file);
+            for(Object o : ts){
+                Personaje p = (Personaje) o;
                 s.writeObject (p);
             } 
-        s.close ();}
+            file.close();
+            s.close ();}
         catch (IOException e) {
             e.printStackTrace ();
         } 

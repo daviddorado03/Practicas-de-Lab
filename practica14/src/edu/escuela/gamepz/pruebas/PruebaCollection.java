@@ -1,6 +1,11 @@
 package edu.escuela.gamepz.pruebas;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -13,7 +18,7 @@ import edu.escuela.gamepz.utils.ByVida;
 import edu.escuela.gamepz.utils.Escudo;
 import edu.escuela.gamepz.utils.Tablero;
 
-public class PruebaCollection {
+public class PruebaCollection implements Serializable{
     public static void main(String[] args) {
         String path = System.getProperty("user.home")+ System.getProperty("file.separator");
         Scanner s = new Scanner(System.in);
@@ -25,7 +30,7 @@ public class PruebaCollection {
                 System.out.println("El archivo existe");
                 System.exit(0);
             } if (f.isDirectory()){
-                //mostrarDirectorio(f);
+                mostrarDirectorio(f);
                 System.exit(0);
             }
         }
@@ -65,9 +70,16 @@ public class PruebaCollection {
     }
     private static void mostrarDirectorio(File f){
         System.out.println(f);
-        System.exit(0);
     }
-    private static void guardarObjetos(f, datos){
-        
+    private static void guardarObjetos(File f,Collection ts){
+        try{
+            FileOutputStream file = new FileOutputStream(f);
+            ObjectOutputStream out = new ObjectOutputStream(file);
+            out.writeObject(ts);
+            out.close();
+            file.close();
+        } catch(IOException io){
+            System.out.println("IOException capturada");
+        }
     }
 }

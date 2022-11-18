@@ -1,9 +1,10 @@
 package edu.escuela.gamepz.pruebas;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.Scanner;
 import java.util.TreeSet;
-
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.personajes.buenos.Planta;
 import edu.escuela.gamepz.personajes.malos.Zombie;
@@ -14,6 +15,10 @@ import edu.escuela.gamepz.utils.Tablero;
 
 public class PruebaCollection {
     public static void main(String[] args) {
+        String path = System.getProperty("user.home")+ System.getProperty("file.separator");
+        Scanner s = new Scanner("path");
+        File fname = new File(s.next());
+        path += fname;
         Personaje[] datos = {
             new Planta("Fabian", Tablero.genVida()), 
             new Zombie("Bianca",Tablero.genVida()),

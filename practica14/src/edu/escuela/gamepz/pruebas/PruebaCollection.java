@@ -1,7 +1,9 @@
 package edu.escuela.gamepz.pruebas;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ import edu.escuela.gamepz.utils.ByVida;
 import edu.escuela.gamepz.utils.Escudo;
 import edu.escuela.gamepz.utils.Tablero;
 
-public class PruebaCollection implements Serializable{
+public class PruebaCollection{
     public static void main(String[] args) {
         String path = System.getProperty("user.home")+ System.getProperty("file.separator");
         Scanner s = new Scanner(System.in);
@@ -69,17 +71,19 @@ public class PruebaCollection implements Serializable{
         }
     }
     private static void mostrarDirectorio(File f){
-        System.out.println(f);
+        System.out.println(f.list());
     }
-    private static void guardarObjetos(File f,Collection ts){
-        try{
-            FileOutputStream file = new FileOutputStream(f);
-            ObjectOutputStream out = new ObjectOutputStream(file);
-            out.writeObject(ts);
-            out.close();
-            file.close();
-        } catch(IOException io){
-            System.out.println("IOException capturada");
-        }
+    private static void guardarObjetos(File f, Collection ts) {
+        try {
+            FileInputStream file = new FileInputStream ("datArbol.ser");
+            ObjectInputStream s = new ObjectInputStream (file);
+            for(int i = 0; i > ts.size(); i++){
+                Personaje p = (Personaje) p;
+                s.writeObject (p);
+            } 
+        s.close ();}
+        catch (IOException e) {
+            e.printStackTrace ();
+        } 
     }
 }
